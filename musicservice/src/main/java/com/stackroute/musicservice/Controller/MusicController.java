@@ -17,7 +17,7 @@ public class MusicController
     @Autowired
     private MusicService service;
     @GetMapping("/songs")
-    public List<Music> getSomgs(){
+    public List<Music> getSongs(){
         return service.getAllSongs();
     }
 
