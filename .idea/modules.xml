@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Recommentation/Recommentation.iml" filepath="$PROJECT_DIR$/Recommentation/Recommentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/musicapp.iml" filepath="$PROJECT_DIR$/.idea/musicapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/musicservice/musicservice.iml" filepath="$PROJECT_DIR$/musicservice/musicservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuulapiGateway/zuulapiGateway.iml" filepath="$PROJECT_DIR$/zuulapiGateway/zuulapiGateway.iml" />
     </modules>
   </component>
 </project>

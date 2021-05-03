@@ -9,6 +9,7 @@
         <module>Favourites</module>
         <module>Recommentation</module>
         <module>Eurekaservermusic</module>
+        <module>zuulapiGateway</module>
 
     </modules>
     <parent>
