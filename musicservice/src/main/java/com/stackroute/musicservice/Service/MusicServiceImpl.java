@@ -36,4 +36,21 @@ public class MusicServiceImpl implements MusicService
     public Music updateSong(Music music) {
         return repository.save(music);
     }
+
+    @Override
+    public Music getSongByreleaseyear(int releaseyear) {
+        return repository.findSongByreleaseyear(releaseyear);
+    }
+
+    @Override
+    public Music getSongBygenreAndartist(String genre, String artist) {
+        return repository.findSongBygenreAndartist(genre, artist);
+    }
+
+    @Override
+    public Music getSongBytitle(String title) {
+        return repository.findSongBytitle(title);
+    }
+
+
 }

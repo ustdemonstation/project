@@ -37,7 +37,22 @@ public class MusicController
     public ResponseEntity<Music> updateSong(@RequestBody Music music){
         return  new ResponseEntity<Music>(service.updateSong(music),HttpStatus.OK);
     }
+    @GetMapping("song1/{releaseyear}")
+    public ResponseEntity<Music> getSongByreleaseyear(@PathVariable int releaaseyear)
+    {
+        return new ResponseEntity<Music>(service.getSongByreleaseyear(releaaseyear),HttpStatus.OK);
+    }
+    @GetMapping("song2/{genre}/{artist}")
 
+    public ResponseEntity<Music> getUserByGenderAndAge(@PathVariable String genre,@PathVariable String artist)
+    {
+        return new ResponseEntity<Music>(service.getSongBygenreAndartist(genre, artist),HttpStatus.OK);
+    }
+    @GetMapping("song3/{title}")
+    public ResponseEntity<Music> getSongBytitle(@PathVariable String title)
+    {
+        return new ResponseEntity<Music>(service.getSongBytitle(title),HttpStatus.OK);
+    }
 
 
 }
