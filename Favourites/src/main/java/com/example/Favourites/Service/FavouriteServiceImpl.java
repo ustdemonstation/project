@@ -28,4 +28,14 @@ public class FavouriteServiceImpl implements FavouriteService{
     public List<Favourites> getAllSongs() {
         return repository.findAll();
     }
+
+    @Override
+    public List<Favourites> getByuserName(String userName) {
+        return (List<Favourites>) repository.findByuserName(userName);
+    }
+
+    @Override
+    public List<Favourites> findByuserName(String userName) {
+        return (List<Favourites>)  repository.getByuserName(userName);
+    }
 }

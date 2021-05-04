@@ -8,17 +8,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="musicservice" />
-        <module name="JwtActivity" />
         <module name="Favourites" />
         <module name="Eurekaserver" />
         <module name="Recommentation" />
         <module name="zuulapiGateway" />
+        <module name="JWTAuthentication_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Eurekaserver" target="11" />
       <module name="Favourites" target="11" />
+      <module name="jwt-service" target="1.5" />
       <module name="JwtActivity" target="11" />
+      <module name="JWTAuthentication_service" target="11" />
       <module name="musicapp" target="11" />
       <module name="musicservice" target="11" />
       <module name="Recommentation" target="11" />
@@ -29,6 +31,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Eurekaserver" options="-parameters" />
       <module name="Favourites" options="-parameters" />
+      <module name="JWTAuthentication_service" options="-parameters" />
       <module name="JwtActivity" options="-parameters" />
       <module name="Recommentation" options="-parameters" />
       <module name="musicservice" options="-parameters" />

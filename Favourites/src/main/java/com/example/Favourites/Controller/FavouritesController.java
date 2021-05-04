@@ -4,6 +4,7 @@ import com.example.Favourites.Model.Favourites;
 import com.example.Favourites.Service.FavouriteService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,11 @@ public class FavouritesController
     }
 
     @GetMapping("/favourites")
-    public List<Favourites> getSongs(){
-        return service.getAllSongs();
+    @ResponseBody
+    public List<Favourites> getSongs(@RequestParam ("userName") String userName)
+    {
+        return service.getByuserName(userName);
     }
+
+
 }

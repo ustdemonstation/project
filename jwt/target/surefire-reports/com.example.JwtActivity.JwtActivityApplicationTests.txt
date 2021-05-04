@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.JwtActivity.JwtActivityApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.226 s - in com.example.JwtActivity.JwtActivityApplicationTests

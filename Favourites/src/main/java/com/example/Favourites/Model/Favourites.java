@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.repository.query.Param;
 
 @Document(collection = "Favourites_record")
     @AllArgsConstructor
@@ -16,6 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
     {
         @Id
         private int id;
+        private String userName;
         private String title;
         private String artist;
         private int releaseyear;

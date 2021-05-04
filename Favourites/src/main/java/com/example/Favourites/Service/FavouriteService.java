@@ -10,4 +10,6 @@ public interface FavouriteService
     Favourites saveSong(Favourites favourites);
     void deleteSong(int id);
     List<Favourites> getAllSongs();
+    public List<Favourites> getByuserName(String userName);
+    public List<Favourites> findByuserName(String userName);
 }
