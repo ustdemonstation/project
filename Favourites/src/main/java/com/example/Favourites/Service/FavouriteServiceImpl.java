@@ -1,5 +1,6 @@
 package com.example.Favourites.Service;
 
+import com.example.Favourites.Exception.FavouriteAlreadyExists;
 import com.example.Favourites.Model.Favourites;
 import com.example.Favourites.Repository.FavouriteRepository;
 import lombok.AllArgsConstructor;
@@ -14,8 +15,14 @@ public class FavouriteServiceImpl implements FavouriteService{
     @Autowired
     private FavouriteRepository repository;
     @Override
-    public Favourites saveSong(Favourites favourites) {
-        return repository.save(favourites);
+    public Favourites saveSong(Favourites favourites) throws FavouriteAlreadyExists
+    {
+        if(repository.existsById(favourites.getId()))
+        {
+            throw new FavouriteAlreadyExists();
+        }
+        Favourites favouriteobj=repository.save(favourites);
+        return repository.save(favouriteobj);
     }
 
     @Override

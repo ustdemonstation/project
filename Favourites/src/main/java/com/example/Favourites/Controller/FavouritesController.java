@@ -1,5 +1,6 @@
 package com.example.Favourites.Controller;
 
+import com.example.Favourites.Exception.FavouriteAlreadyExists;
 import com.example.Favourites.Model.Favourites;
 import com.example.Favourites.Service.FavouriteService;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,7 @@ public class FavouritesController
     @Autowired
     private FavouriteService service;
     @PostMapping("/favourite")
-    public ResponseEntity<Favourites> saveSong(@RequestBody Favourites favourites){
+    public ResponseEntity<Favourites> saveSong(@RequestBody Favourites favourites) throws FavouriteAlreadyExists {
         return new ResponseEntity<Favourites>(service.saveSong(favourites), HttpStatus.CREATED);
     }
 
